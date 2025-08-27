@@ -1,12 +1,16 @@
-#include <stdio.h>
+#include <stdio.h>		// Standard I/O
+#include <stdlib.h>
+#include <string.h>		// String library
+#include <ctype.h>// Character type functions
+#include <conio.h>//
 } Passenger;
 
 
-// Login structure
+// Login s
 typedef struct Login {
-	char username[20];
-	char password[10]; // 6 chars + null
-	struct Login* next;
+	char username[20]; //added username field
+	char password[10]; //added password field
+	struct Login* next;// pointer to next login
 } Login;
 
 
@@ -14,8 +18,8 @@ Passenger* head = NULL;
 Login* loginHead = NULL;
 
 
-// Function prototypes
-void loadPassengers();
+// these are my named fuctions 
+void loadPassengers();// Load passenger file
 void savePassengers();
 void addPassenger();
 void displayAll();
