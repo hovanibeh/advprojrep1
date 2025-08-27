@@ -64,3 +64,16 @@ void loadLogins() {
 		fclose(fp);
 		fp = fopen("login.txt", "r");
 	}
+	Login* temp, * last = NULL;
+	while (!feof(fp)) {
+		temp = (Login*)malloc(sizeof(Login));
+		if (fscanf(fp, "%s %s", temp->username, temp->password) == 2) {
+			temp->next = NULL;
+			if (!loginHead) loginHead = temp;
+			else last->next = temp;
+			last = temp;
+		}
+		else free(temp);
+	}
+	fclose(fp);
+}
