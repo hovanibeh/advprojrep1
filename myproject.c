@@ -1,0 +1,66 @@
+#include <stdio.h>
+} Passenger;
+
+
+// Login structure
+typedef struct Login {
+	char username[20];
+	char password[10]; // 6 chars + null
+	struct Login* next;
+} Login;
+
+
+Passenger* head = NULL;
+Login* loginHead = NULL;
+
+
+// Function prototypes
+void loadPassengers();
+void savePassengers();
+void addPassenger();
+void displayAll();
+void displayOne();
+void updatePassenger();
+void deletePassenger();
+void generateStats();
+void report();
+void listByYear();
+int login();
+
+
+// Helper validation
+int validateEmail(const char* email) {
+	return (strstr(email, "@") && strstr(email, ".") && strstr(email, ".com"));
+}
+
+
+// Password masking input
+void getPassword(char* pass, int size) {
+	int i = 0;
+	char ch;
+	while (i < size - 1) {
+		ch = getch();
+		if (ch == '\n' || ch == '\r') break;
+		if (ch == '\b' && i > 0) {
+			i--;
+			printf("\b \b");
+			continue;
+		}
+		if (isprint(ch)) {
+			pass[i++] = ch;
+			printf("*");
+		}
+	}
+	pass[i] = '\0';
+}
+
+
+// Load login file
+void loadLogins() {
+	FILE* fp = fopen("login.txt", "r");
+	if (!fp) {
+		fp = fopen("login.txt", "w");
+		fprintf(fp, "admin secret\nmanager qwerty\nuser01 abc123\n");
+		fclose(fp);
+		fp = fopen("login.txt", "r");
+	}
