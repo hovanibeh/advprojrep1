@@ -1,0 +1,13 @@
+Rail Ireland Passenger Report
+=============================
+PPS: 1005 | Clinton Imade | YOB: 1965 | clinton.imade@gmail.com | From: Munster | Class: Economy | Trips: >5
+PPS: 1004 | Tai Davies | YOB: 2000 | tai.davies@gmail.com | From: Ulster | Class: First | Trips: <3
+PPS: 1003 | Martin Hynes | YOB: 1978 | martin.hynes@yahoo.com | From: Connacht | Class: Economy | Trips: >5
+PPS: 1002 | Hovan Ibeh | YOB: 1992 | hovan.ibeh@gmail.com | From: Leinster | Class: First | Trips: <5
+Total passengers: 4
+Statistics (by area):
+Dublin:   0.0%
+Leinster: 25.0%
+Connacht: 25.0%
+Ulster:   25.0%
+Munster:  25.0%

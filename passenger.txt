@@ -1,4 +1,4 @@
-2001 Hovan Ibeh 1992 hovan.ibe@gmail.com Athlone Economy more_than_five
-2002 Martin Hynes 1988 martin.hynes@yahoo.com Galway FirstClass less_than_three
-2003 Tai Davies 1999 tai.davies@outlook.com Connacht Economy less_than_five
-2004 Clinton Imade 1995 clinton.imade@hotmail.com Munster Economy less_than_three
+1002 Hovan Ibeh 1992 hovan.ibeh@gmail.com Leinster First <5
+1003 Martin Hynes 1978 martin.hynes@yahoo.com Connacht Economy >5
+1004 Tai Davies 2000 tai.davies@gmail.com Ulster First <3
+1005 Clinton Imade 1965 clinton.imade@gmail.com Munster Economy >5
