@@ -1,4 +1,4 @@
-// hovanibeh.c
+// my code is called myproject.c
 // Simple student-style passenger system with login, files, linked list, and report
 // Updated for 4 passengers: Hovan Ibeh, Martin Hynes, Tai Davies, Clinton Imade
 #include <stdio.h>
@@ -24,7 +24,7 @@ typedef struct Passenger {
     struct Passenger* next; // pointer to next node
 } Passenger;
 Passenger* head = NULL; // start of linked list
-// ---- EXPLANATION COMMENTS ----
+// meanings of functions used:
 // strcmp(a,b) = compares two strings, returns 0 if same
 // malloc(n) = allocates memory, must free later
 // free(ptr) = frees memory
@@ -56,7 +56,7 @@ void loadPassengers() {
     fclose(f);
 }
 void savePassengers() { /* same as before */ }
-// ----------------- LIST FUNCTIONS -----------------
+
 void addPassenger() { /* same as before */ }
 void displayAll() { /* same as before */ }
 Passenger* findPassenger(int pps) { /* same as before */ }
@@ -83,13 +83,12 @@ void stats() {
     printf("Ulster: %.1f%%\n", u * 100.0 / tot);
     printf("Munster: %.1f%%\n", m * 100.0 / tot);
 }
-// ----------------- REPORT -----------------
 void printReport() {
     // Generates report.txt with all 4 passengers
     FILE* f = fopen("report.txt", "w");
     if (!f) { printf("Could not open report.txt\n"); return; }
-    fprintf(f, "Rail Ireland Passenger Report\n");
-    fprintf(f, "=============================\n\n");
+    fprintf(f, "Passenger Report\n");
+   
     if (!head) { fprintf(f, "No passengers.\n"); fclose(f); return; }
     Passenger* t = head;
     int total = 0;
